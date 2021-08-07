@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Quiz</title>
+</head>
+<body>
+    <form class="quiz-form">
+       <!-- QUESTION 2 -->
+        <div class="question-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam mollitia repudiandae, molestias quam sapiente dolores, error odit corporis eum voluptates vero aspernatur voluptate fuga! Dolor nostrum eaque similique voluptas.</p>
+            <label for="">
+                <input type="radio" value="45" name="question1" id="">45
+            </label>
+            <label for="">
+                <input type="radio" value="45" name="question1" id="">45
+            </label>
+            <label for="">
+                <input type="radio" value="60" name="question1" id="">60
+            </label>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="question-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam mollitia repudiandae, molestias quam sapiente dolores, error odit corporis eum voluptates vero aspernatur voluptate fuga! Dolor nostrum eaque similique voluptas.</p>
+            <label for="">
+                <input type="radio" value="45" name="question2" id="">45
+            </label>
+            <label for="">
+                <input type="radio" value="45" name="question2" id="">45
+            </label>
+            <label for="">
+                <input type="radio" value="60" name="question2" id="">60
+            </label>
+        </div>
+        
+    </form>
+
+    <button id="submit-answer-btn">Submit Answers</button>
+
+    <div id="output"></div>
+
+
+    <!-- seperation of concerns.... js in html for onclick -->
+
+
+    <script>
+        var quizForm = document.querySelector(".quiz-form");
+        var submitBtn = document.querySelector("#submit-answer-btn");
+        var output = document.querySelector("#output");
+
+        var correctAnswers = ["90", "right-angled"];
+
+        function calculateScore(){
+            let score = 0;
+            let index = 0;
+
+            // READ ABOUT OF FORM-DATA
+
+            var formResults = new FormData(quizForm);
+            for(let value of formResults.values()){
+                if(value === correctAnswers[index]){
+                    score += 1;
+                }
+                index += 1; 
+            }
+            output.innerText = "Your score is:" + score;
+        }
+
+        submitBtn.addEventListener("click", calculateScore);
+    </script>
+</body>
+</html>

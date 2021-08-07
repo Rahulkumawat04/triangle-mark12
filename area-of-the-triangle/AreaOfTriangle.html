@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of the triangle</title>
+</head>
+<body>
+    <h1>area of the triangle</h1>
+
+    <label>base:</label>
+    <input type="number" class="input">
+
+    <label>height: </label>
+    <input type="number" class="input">
+
+    <button id="area-btn">Calculate Area</button>
+
+    <div id="output-div"></div>
+
+    <script>
+        var sides = document.querySelectorAll(".input");
+
+        var areaBtn = document.querySelector("#area-btn");
+
+        var output = document.querySelector("#output-div");
+
+
+        function calculateProductofBH(a, b){
+            var product = a*b;
+            
+            return product;
+        }
+
+        function calculateArea(){
+            var product = calculateProductofBH(Number(sides[0].value), Number(sides[1].value));
+
+            var finalArea = 1/2*(product);
+
+            output.innerText = "the area of the triangle is: " + finalArea;
+        }
+
+        areaBtn.addEventListener("click", calculateArea);
+    </script>
+
+</body>
+</html>
