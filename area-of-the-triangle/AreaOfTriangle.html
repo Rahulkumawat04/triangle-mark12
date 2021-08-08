@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area of the triangle</title>
+    <link rel="stylesheet" href="./areaoftriangle.css">
 </head>
+
+<!-- HTML  -->
+
 <body>
-    <h1>area of the triangle</h1>
+    <h1>Fun with Triangles</h1>
 
-    <label>base:</label>
-    <input type="number" class="input">
+    <nav id="navbar">
+        <a href="/Home-page-is-it-a-triangle/index.html" class="nav-links">Homepage</a>
+        <a href="/triangle-quiz/quiz.html" class="nav-links">Triangle quiz</a>
+        <a href="/calculate-hypotenuse/hypotenuse.html" class="nav-links">Calculate Hypotenuse</a>
+        <a href="/area-of-the-triangle/AreaOfTriangle.html" class="nav-links active-link">Calculate Area</a>
+    </nav>
 
-    <label>height: </label>
-    <input type="number" class="input">
+    <hr>
 
-    <button id="area-btn">Calculate Area</button>
+    <div id="container">
+        <label>Base of the Triangle (in cm):</label>
+        <input type="number" class="input">
 
-    <div id="output-div"></div>
+        <label>Height of the Triangle (in cm): </label>
+        <input type="number" class="input">
 
-    <script>
-        var sides = document.querySelectorAll(".input");
+        <button id="area-btn">Calculate Area</button>
 
-        var areaBtn = document.querySelector("#area-btn");
+        <div id="output-div"></div>
 
-        var output = document.querySelector("#output-div");
+        <footer class="footer">
+            <div class="footer-header"><h3>Made by <a href="https://rahulkumawat.netlify.app/" id="footer-madeBy" class="link">Rahul Kumawat</a></h3></div>
+            <ul class="non-bullet-list">
+                <li class="inline-list">
+                    <a href="https://github.com/RahulKumawat04" class="link" target="_blank"><img src="/imgs/github.png" class="footer-img"></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.instagram.com/rahul_k04/" class="link" target="_blank"><img src="/imgs/instagram.png" class="footer-img"></a></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.twitter.com/rahul_k04" class="link" target="_blank"><img src="/imgs/twitter.png" class="footer-img"></a></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.linkedin.com/in/rahul-kumawat-b983981a4/" class="link" target="_blank"><img src="/imgs/linkedin.png" class="footer-img"></a></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
 
-        function calculateProductofBH(a, b){
-            var product = a*b;
-            
-            return product;
-        }
+    <!-- JAVASCRIPT -->
 
-        function calculateArea(){
-            var product = calculateProductofBH(Number(sides[0].value), Number(sides[1].value));
+    <script src="./areaOfTriangle.js">
 
-            var finalArea = 1/2*(product);
-
-            output.innerText = "the area of the triangle is: " + finalArea;
-        }
-
-        areaBtn.addEventListener("click", calculateArea);
     </script>
 
 </body>
+
 </html>

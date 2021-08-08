@@ -1,75 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triangle Quiz</title>
+    <link rel="stylesheet" href="./quiz.css">
 </head>
+
 <body>
-    <form class="quiz-form">
-       <!-- QUESTION 2 -->
-        <div class="question-container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam mollitia repudiandae, molestias quam sapiente dolores, error odit corporis eum voluptates vero aspernatur voluptate fuga! Dolor nostrum eaque similique voluptas.</p>
-            <label for="">
-                <input type="radio" value="45" name="question1" id="">45
-            </label>
-            <label for="">
-                <input type="radio" value="45" name="question1" id="">45
-            </label>
-            <label for="">
-                <input type="radio" value="60" name="question1" id="">60
-            </label>
-        </div>
+    <h1>Fun with Triangles!</h1>
 
-        <!-- QUESTION 2 -->
-        <div class="question-container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam mollitia repudiandae, molestias quam sapiente dolores, error odit corporis eum voluptates vero aspernatur voluptate fuga! Dolor nostrum eaque similique voluptas.</p>
-            <label for="">
-                <input type="radio" value="45" name="question2" id="">45
-            </label>
-            <label for="">
-                <input type="radio" value="45" name="question2" id="">45
-            </label>
-            <label for="">
-                <input type="radio" value="60" name="question2" id="">60
-            </label>
-        </div>
-        
-    </form>
+    <nav id="navbar">
+        <a href="/Home-page-is-it-a-triangle/index.html" class="nav-links">Homepage</a>
+        <a href="/triangle-quiz/quiz.html" class="nav-links active-link">Triangle quiz</a>
+        <a href="/calculate-hypotenuse/hypotenuse.html" class="nav-links">Calculate Hypotenuse</a>
+        <a href="/area-of-the-triangle/AreaOfTriangle.html" class="nav-links">Calculate Area</a>
+    </nav>
 
-    <button id="submit-answer-btn">Submit Answers</button>
+    <hr>
 
-    <div id="output"></div>
+    <div id="container">
+        <h2>Do you know your Triangles well enough??</h2>
+
+        <form class="quiz-form">
+            <!-- QUESTION 1 -->
+            <div class="question-container">
+                <p>1. Which of the following triangles are always similar?</p>
+                <label for="">
+                    <input type="radio" value="rightAngledTriangle" name="question1" id="">Right-angle Triangle
+                </label>
+                <label for="">
+                    <input type="radio" value="equitriangle" name="question1" id="">Equilateral triangle 
+                </label>
+                <label for="">
+                    <input type="radio" value="obtuse" name="question1" id="">Obtuse-angled Triangle
+                </label>
+            </div>
+
+
+            <hr class="btw-questions">
+
+
+            <!-- QUESTION 2 -->
+            <div class="question-container">
+                <p>2. Which of the Triangles has all three angles different?</p>
+                <label for="">
+                    <input type="radio" value="equitri" name="question2" id="">Equilateral Triangle
+                </label>
+                <label for="">
+                    <input type="radio" value="ScaleneTri" name="question2" id="">Scalene Triangle
+                </label>
+                <label for="">
+                    <input type="radio" value="isoTri" name="question2" id="">Isoceles Triangle
+                </label>
+            </div>
+
+            <hr class="btw-questions">
+
+             <!-- QUESTION 3 -->
+             <div class="question-container">
+                <p>3. Which of the following statements is true??</p>
+                <label for="">
+                    <input type="radio" value="opt1" name="question3" id="">A triangle can have two obtuse angles.
+                </label>
+                <label for="">
+                    <input type="radio" value="opt2" name="question3" id="">Every Triangle cannot have an Exterior angle. 
+                </label>
+                <label for="">
+                    <input type="radio" value="opt3" name="question3" id=""> A triangle can have 2 right angles.
+                </label>
+            </div>            
+
+            <hr class="btw-questions">
+
+        </form>
+
+        <button id="submit-answer-btn">Submit Answers</button>
+
+        <div id="output"></div>
+
+        <footer class="footer">
+            <div class="footer-header"><h3>Made by <a href="https://rahulkumawat.netlify.app/" id="footer-madeBy" class="link">Rahul Kumawat</a></h3></div>
+            <ul class="non-bullet-list">
+                <li class="inline-list">
+                    <a href="https://github.com/RahulKumawat04" class="link" target="_blank"><img src="/imgs/github.png" class="footer-img"></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.instagram.com/rahul_k04/" class="link" target="_blank"><img src="/imgs/instagram.png" class="footer-img"></a></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.twitter.com/rahul_k04" class="link" target="_blank"><img src="/imgs/twitter.png" class="footer-img"></a></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.linkedin.com/in/rahul-kumawat-b983981a4/" class="link" target="_blank"><img src="/imgs/linkedin.png" class="footer-img"></a></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
 
     <!-- seperation of concerns.... js in html for onclick -->
 
 
-    <script>
-        var quizForm = document.querySelector(".quiz-form");
-        var submitBtn = document.querySelector("#submit-answer-btn");
-        var output = document.querySelector("#output");
-
-        var correctAnswers = ["90", "right-angled"];
-
-        function calculateScore(){
-            let score = 0;
-            let index = 0;
-
-            // READ ABOUT OF FORM-DATA
-
-            var formResults = new FormData(quizForm);
-            for(let value of formResults.values()){
-                if(value === correctAnswers[index]){
-                    score += 1;
-                }
-                index += 1; 
-            }
-            output.innerText = "Your score is:" + score;
-        }
-
-        submitBtn.addEventListener("click", calculateScore);
-    </script>
+    <script src="./quiz-page.js"></script>
 </body>
+
 </html>

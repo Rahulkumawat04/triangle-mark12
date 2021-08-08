@@ -1,0 +1,100 @@
+body{
+    margin: auto;
+    background-image: url("https://images.hdqwalls.com/wallpapers/glowing-triangle-neon-pq.jpg");
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+#navbar{
+    text-align: center;
+    margin: auto;
+}
+
+#container{
+    width: 50%;
+    margin: auto;
+}
+
+.nav-links{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: white;   
+}
+
+label{
+    display:block;
+    /* margin: auto; */
+    text-align: left;
+    margin: 1.5rem 0rem 0.3rem 0rem;
+    font-size: 1rem;
+}
+
+input{
+    /* margin: auto; */
+    display:block;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+#hypotenuse-btn{
+    margin: auto;
+    display: block;
+    margin-top: 1.2rem;
+    padding: 1rem 1.2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+#output-div{
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.active-link{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: white;   
+    font-weight: 800;
+    font-size: larger;
+}
+
+
+.footer {
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--secondary-color);
+    border-radius: 10rem;
+}
+
+.footer .link {
+    color: var(--secondary-color);
+    /* text-decoration: none; */
+}
+
+.footer .footer-header {
+    font-weight: bold;
+}
+
+.non-bullet-list {
+    list-style: none;
+}
+
+.inline-list {
+    display: inline;
+}
+
+.footer-img{
+    height:2rem;
+    width: 2rem;
+    padding: 0rem 0.5rem;
+}

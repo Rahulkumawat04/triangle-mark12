@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hypotenuse Calculations</title>
+    <link rel="stylesheet" href="./hypotenuse.css">
 </head>
+
 <body>
-    <h1>Calculate Hypotenuse</h1>
+    <h1>Fun with Triangles</h1>
 
-    <label>Side 1:</label>
-    <input type="number" class="side-input">
+    <nav id="navbar">
+        <a href="/Home-page-is-it-a-triangle/index.html" class="nav-links">Homepage</a>
+        <a href="/triangle-quiz/quiz.html" class="nav-links">Triangle quiz</a>
+        <a href="/calculate-hypotenuse/hypotenuse.html" class="nav-links active-link">Calculate Hypotenuse</a>
+        <a href="/area-of-the-triangle/AreaOfTriangle.html" class="nav-links">Calculate Area</a>
+    </nav>
 
-    <label>Side 2</label>
-    <input type="number" class="side-input">
+    <hr>
+    <div id="container">
+        <label>Side 1 (in cm):</label>
+        <input type="number" class="side-input">
 
-    <button id="hypotenuse-btn">Calculate Hypotenuse</button>
+        <label>Side 2  (in cm):</label>
+        <input type="number" class="side-input">
 
-    <div id="output-div"></div>
+        <button id="hypotenuse-btn">Calculate Hypotenuse</button>
 
+        <div id="output-div"></div>
 
-    <script>
-        var sides = document.querySelectorAll(".side-input");
+        <footer class="footer">
+            <div class="footer-header"><h3>Made by <a href="https://rahulkumawat.netlify.app/" id="footer-madeBy" class="link">Rahul Kumawat</a></h3></div>
+            <ul class="non-bullet-list">
+                <li class="inline-list">
+                    <a href="https://github.com/RahulKumawat04" class="link" target="_blank"><img src="/imgs/github.png" class="footer-img"></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.instagram.com/rahul_k04/" class="link" target="_blank"><img src="/imgs/instagram.png" class="footer-img"></a></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.twitter.com/rahul_k04" class="link" target="_blank"><img src="/imgs/twitter.png" class="footer-img"></a></a>
+                </li>
+                <li class="inline-list">
+                    <a href="https://www.linkedin.com/in/rahul-kumawat-b983981a4/" class="link" target="_blank"><img src="/imgs/linkedin.png" class="footer-img"></a></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 
-        var hypotenuseBtn = document.querySelector("#hypotenuse-btn");
-
-        var output = document.querySelector("#output-div");
-
-
-        function calculateSumOfSquares(a, b){
-            var sumOfSquares = a*a + b*b;
-            
-            return sumOfSquares;
-        }
-
-        function calculteHypotenuse(){
-            var sumOfSquares = calculateSumOfSquares(Number(sides[0].value), Number(sides[1].value));
-
-            var lengthOfHypotenuse = Math.sqrt(sumOfSquares);
-
-            output.innerText = "the length of hypotenuse is: " + lengthOfHypotenuse;
-        }
-
-        hypotenuseBtn.addEventListener("click", calculteHypotenuse);
-    </script>
+    <script src="./hypotenuse.js"></script>
 </body>
+
 </html>
