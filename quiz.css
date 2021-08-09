@@ -8,6 +8,7 @@ h1{
     text-align: center;
 }
 
+
 #navbar{
     text-align: center;
     margin: auto;
@@ -24,37 +25,26 @@ h1{
     color: white;   
 }
 
+.btw-questions{
+    margin: 1rem 0rem;
+}
+
 label{
-    display:block;
-    /* margin: auto; */
-    text-align: left;
-    margin: 1.5rem 0rem 0.3rem 0rem;
-    font-size: 1rem;
-}
-
-input{
-    /* margin: auto; */
-    display:block;
-    margin-bottom: 1rem;
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 2rem;
-}
-
-#area-btn{
-    margin: auto;
     display: block;
-    margin-top: 1.2rem;
-    padding: 1rem 1.2rem;
-    border-radius: 1rem;
-    font-size: 1rem;
 }
 
-#output-div{
-    font-size: 1.3rem;
+#submit-answer-btn{
+    display: block;
+    /* margin: auto; */
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+#output{
+    font-size: 1.2rem;
     text-align: center;
-    padding: 2rem;
-    margin: 1rem;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .active-link{
@@ -66,17 +56,17 @@ input{
 }
 
 .footer {
-    background-color: var(--primary-color);
+    background-color: white;
     width: 100%;
     padding: 2rem 1rem;
     margin-top: 2rem;
     text-align: center;
-    color: var(--secondary-color);
+    color: black;
     border-radius: 10rem;
 }
 
 .footer .link {
-    color: var(--secondary-color);
+    color: black;
     /* text-decoration: none; */
 }
 
